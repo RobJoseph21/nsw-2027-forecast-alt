@@ -1550,6 +1550,7 @@
     pauseSnap();
     history.replaceState(null, '', window.location.pathname);
     window.scrollTo(0, 0);
+    requestAnimationFrame(function() { window.scrollTo(0, 0); });
   }
   document.querySelectorAll('a.seat-tile').forEach(function(t) {
     t.addEventListener('click', pauseSnap);
